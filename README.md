@@ -1,29 +1,5 @@
-checkadmin
+Users-Web - Aplicação de exemplo de client angularJS com api em ruby
 ========================
-
-# Criar banco de dados "checkadmin", estamos usando MYSQL
-
-**Username =** user@tester.com.br
-
-**Password =** password
-
-Teste
-====================
-
-Maven 3.2.0+
-
-**mvn clean install**
-
-**http://localhost:4444/test**
-
-Executando
-====================
-
-
-
-# Tomcat 8:
-
-Fazer Deploy do exploded artefact no Tomcat 8. O root context deve estar "setado" no modulo API.
 
 ### Rodar o CLIENT via gulp.babel.js:
 
