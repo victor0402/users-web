@@ -1,0 +1,73 @@
+<!-- Add mousewheel plugin (this is optional) -->
+	<script type="text/javascript" src="/pss/interface/_js/fancyBox/lib/jquery.mousewheel-3.0.6.pack.js"></script>
+	<!-- Add fancyBox -->
+	<link rel="stylesheet" href="/latosensu/interface/plugins/fancyBox/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+	<script type="text/javascript" src="/latosensu/interface/plugins/fancyBox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+	<script type="text/javascript">
+									$(document).ready(function () {
+										/*
+										 *  Simple image gallery. Uses default settings
+										 */
+
+										$('.fancybox').fancybox();
+
+										// Remove padding, set opening and closing animations, close if clicked and disable overlay
+										$(".fancybox-effects-d").fancybox({
+											padding: 0,
+											openEffect: 'elastic',
+											openSpeed: 150,
+											closeEffect: 'elastic',
+											closeSpeed: 150,
+											closeClick: true,
+											width: 950,
+											autoScale: true,
+											margin: 60,
+											helpers: {
+												overlay: null
+											}
+										});
+                                        
+                                        // Remove padding, set opening and closing animations, close if clicked and disable overlay
+										$(".fancybox-effects-x").fancybox({
+											padding: 0,
+											openEffect: 'elastic',
+											openSpeed: 150,
+											closeEffect: 'elastic',
+											closeSpeed: 150,
+											closeClick: true,
+											width: 950,
+											autoScale: true,
+                                            autoSize:false,
+											margin: 60,
+											helpers: {
+												overlay: null
+											}
+										});
+										
+                                        // Remove padding, set opening and closing animations, close if clicked and disable overlay
+										$(".fancybox-effects-min").fancybox({
+											padding: 0,
+											openEffect: 'elastic',
+											openSpeed: 150,
+											closeEffect: 'elastic',
+											closeSpeed: 150,
+											closeClick: true,
+											width: 400,
+											autoScale: true,
+                                            autoSize:false,
+											margin: 60,
+											helpers: {
+												overlay: null
+											}
+										});
+
+									});
+                                    
+                                    
+	</script>
+	<style type="text/css">
+		.fancybox-custom .fancybox-skin {
+			box-shadow: 0 0 250px #222;
+		}
+	</style>

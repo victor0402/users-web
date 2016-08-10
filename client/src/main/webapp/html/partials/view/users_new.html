@@ -1,0 +1,45 @@
+<div class="main-wrap card">
+    <div class="card-panel">
+        <h4 class="header2">Novo Usuário</h4>
+        <div class="row">
+           <form name="userForm" class="col s12 form-horizontal" METHOD="post" novalidate>
+
+
+                <div class="row">
+                    <div class="input-field col s12" example-has-error>
+                        <input id="title" data-ng-model="user.name" type="text" class="form-control"
+                        example-focus
+                        required/>
+                        <label for="title" class="">Nome</label>
+                    </div>
+
+                </div>
+
+               <div class="row">
+                   <div class="input-field col s12" example-has-error>
+                       <input id="email" data-ng-model="user.email" type="email" class="form-control"
+                              example-focus
+                              required/>
+                       <label for="email" class="">E-mail</label>
+                   </div>
+
+               </div>
+
+                <div class="row">
+
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <!--<input type="submit" value="Salvar" class="btn btn-success"-->
+                            <!--data-ng-disabled="userForm.$invalid"-->
+                            <!--data-ng-click="new_checklist(checklist)"/>-->
+                            <button class="btn cyan waves-effect waves-light right"
+                                    type="submit" data-ng-disabled="userForm.$invalid" data-ng-click="new_user(user)">Salvar
+                                <i class="mdi-content-send right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
