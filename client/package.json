@@ -1,7 +1,7 @@
 {
   "name": "client",
   "version": "0.0.1-SNAPSHOT",
-  "description": "checkadmin",
+  "description": "users-web",
   "babel": {
     "presets": [
       "es2015"

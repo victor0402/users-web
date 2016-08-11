@@ -19,4 +19,9 @@ angular.module('app.services').service('messageService', ['$rootScope', function
     this.clearInfo = function () {
         $rootScope.alerts = [];
     }
+    
+    this.clearAllMessages = function(){
+        this.clearError();
+        this.clearInfo();
+    }
 }]);

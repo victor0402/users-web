@@ -1,0 +1,64 @@
+<div class="card-panel">
+    <h4 class="header2">Editar Usuário</h4>
+    <div class="row">
+        <form name="userForm" class="col s12 form-horizontal" METHOD="post" novalidate>
+
+
+            <div class="row">
+                <div class="input-field col s12" example-has-error>
+                    <input id="id" data-ng-model="user_edit.id" type="text" class="form-control"
+                           example-focus placeholder="" readonly
+                           required/>
+                    <label for="id" class="active">#</label>
+                </div>
+
+            </div>
+
+
+            <div class="row">
+                <div class="input-field col s12" example-has-error>
+                    <input id="title" data-ng-model="user_edit.name" type="text" class="form-control"
+                           example-focus placeholder=""
+                           required/>
+                    <label for="title" class="active">Nome</label>
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="input-field col s12" example-has-error>
+                    <input id="email" data-ng-model="user_edit.email" type="email" class="form-control"
+                           example-focus
+                           required/>
+                    <label for="email" class="">E-mail</label>
+                </div>
+
+            </div>
+
+            <div class="row">
+
+                <div class="row">
+                    <div class="col s12">
+                        <!--<input type="submit" value="Salvar" class="btn btn-success"-->
+                        <!--data-ng-disabled="userForm.$invalid"-->
+                        <!--data-ng-click="new_checklist(checklist)"/>-->
+
+                        <button class="btn cyan waves-effect waves-light right"
+                                type="submit" data-ng-disabled="userForm.$invalid"
+                                data-ng-click="edit_user(user_edit)">
+                            Salvar
+                            <i class="fa fa-save right"></i>
+                        </button>
+
+                        <a class="btn grey waves-effect waves-light white-text right btn-cancelar"
+                           href="/users/search">
+                            Cancelar
+                            <i class="fa fa-times right"></i>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

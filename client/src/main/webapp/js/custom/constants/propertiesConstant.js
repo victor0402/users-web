@@ -1,5 +1,5 @@
 'use strict';
 
 angular.module('app.constants').constant('propertiesConstant', {
-    API_URL: '/api'
+    API_URL: '/api/v1'
 });

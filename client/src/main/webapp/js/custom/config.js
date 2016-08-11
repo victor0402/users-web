@@ -1,10 +1,14 @@
 'use strict';
 
 angular.module('app')
+
     .config(['$routeProvider', '$httpProvider', '$locationProvider', function ($routeProvider, $httpProvider, $locationProvider) {
 
+        //
+
+
         $locationProvider.html5Mode(true);
-        
+
         // ======= router configuration =============
 
         $routeProvider
@@ -23,24 +27,18 @@ angular.module('app')
                 controller: 'UsersController',
                 templateUrl: 'html/partials/view/users_new.html'
             })
-           
+            .when('/users/edit/:id', {
+                title: 'Editar Usuário',
+                controller: 'UsersController',
+                templateUrl: 'html/partials/view/users_edit.html'
+            })
+
             .otherwise({redirectTo: "/main"});
 
         // ======== http configuration ===============
 
         $httpProvider.interceptors.push(function ($q, $location, messageService, storageService, storageConstant) {
             return {
-                'request': function (request) {
-                    messageService.clearError();
-
-                    var authToken = storageService.getSessionItem(storageConstant.AUTH_TOKEN);
-
-                    if (authToken) {
-                        request.headers['X-AUTH-TOKEN'] = authToken;
-                    }
-
-                    return request;
-                },
                 'response': function (response) {
                     return response;
                 },
@@ -65,6 +63,11 @@ angular.module('app')
                 }
             };
         });
+    }])
+    .run(['$rootScope', 'messageService', function($rootScope, messageService) {
+        $rootScope.$on("$locationChangeStart", function(event, next, current) {
+            // messageService.clearError();
+            // messageService.clearInfo();
+        });
     }]);
 
-    

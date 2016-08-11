@@ -1384,3 +1384,17 @@ h4.header2 {
 .alert-danger .alert-link {
     color: #843534
 }
+
+.alerts{
+    margin-top: 5px !important;
+}
+
+.div-alert{
+    position: relative;
+    min-height: 1px;
+
+}
+
+.btn-cancelar{
+    margin-right: 4px !important;
+}
